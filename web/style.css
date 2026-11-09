@@ -1,0 +1,30 @@
+/* Global colors and typography keep the interface consistent and readable. */
+:root { font-family: system-ui, sans-serif; color: #152c2d; background: #eff5f2; }
+body { margin: 0; }
+main { max-width: 900px; margin: auto; padding: 2.5rem 1.25rem; }
+header { margin-bottom: 1.8rem; }
+h1 { font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: -.05em; margin: .25rem 0; }
+.eyebrow { font-size: .76rem; font-weight: 750; letter-spacing: .18em; color: #226b5d; }
+
+/* Each workflow stage is presented as a separate card. */
+section { background: white; border: 1px solid #ceddd6; border-radius: 14px; padding: 1.25rem; margin-bottom: 1rem; }
+h2 { margin: 0 0 .8rem; font-size: 1.25rem; }
+h2 span { color: #226b5d; font-size: .9rem; margin-right: .45rem; }
+
+/* Form controls wrap on smaller screens while remaining keyboard accessible. */
+form { display: flex; align-items: center; flex-wrap: wrap; gap: .65rem; }
+label { font-weight: 650; }
+input { box-sizing: border-box; max-width: 100%; font: inherit; }
+input[type=text] { flex: 1 1 280px; padding: .65rem; border: 1px solid #8ba69a; border-radius: 6px; }
+button { background: #135c4e; border: 0; border-radius: 7px; color: white; font: inherit; font-weight: 650; padding: .65rem .9rem; cursor: pointer; }
+button:disabled { opacity: .55; cursor: wait; }
+a { color: #135c4e; }
+
+/* Long scrubbed statements remain readable without forcing the page to grow indefinitely. */
+pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 17rem; overflow: auto; padding: 1rem; background: #f2f7f4; border-radius: 8px; }
+.hint { color: #435d54; font-size: .9rem; }
+#status { position: sticky; bottom: 0; width: fit-content; background: #f2f7f4; color: #143830; font-weight: 650; }
+
+/* Chat results and list items can contain long merchant names or evidence references. */
+#messages article { background: #f2f7f4; border-radius: 8px; padding: .75rem; margin-bottom: .6rem; }
+li { margin-bottom: .35rem; overflow-wrap: anywhere; }

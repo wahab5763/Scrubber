@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Statement Scrubber</title>
+<link rel="stylesheet" href="/web/style.css">
+<script src="/web/app.js" defer></script>
+</head>
+<body>
+<main>
+
+<header><h2>Statement Scrubber</h2>
+<!-- upload files for local extraction, scrubbing, and database storage -->
+<section>
+<h2><span>01</span> Upload and scrub</h2>
+<form id="upload">
+<label for="files">Bank statements</label>
+<input id="files" type="file" accept=".pdf,.docx,.csv,.txt" multiple required>
+<button>Scrub and save</button>
+</form>
+<p class="hint">PDF, DOCX, CSV or TXT · Up to 20 files · 24 MB combined</p>
+</section>
+<!-- The user can verify and download the stored scrubbed text before analysis. -->
+<section id="preview" hidden>
+<h2><span>02</span> Review scrubbed output</h2>
+<p id="stored"></p>
+<a id="download" download="combined-scrubbed.txt">Download combined text</a>
+<pre id="scrubbed" tabindex="0"></pre>
+</section>
+<!-- Analysis is requested separately so the user can inspect the scrubbed output first. -->
+<section id="insights" hidden>
+<h2><span>03</span> Budgeting analysis</h2>
+<p class="hint">Generate insights with Groq using evidence derived from the saved text.</p>
+<button id="analyze">Generate analysis</button>
+<div id="analysis" aria-live="polite"></div>
+</section>
+<!-- Follow-up questions are available after the analysis stage. -->
+<section id="chat" hidden>
+<h2><span>04</span> Ask a follow-up</h2>
+<div id="messages" aria-live="polite"></div>
+<form id="ask">
+<label for="question">Your question</label>
+<input id="question" type="text" placeholder="How much went to food and groceries?" maxlength="500" required>
+<button>Ask</button>
+</form>
+</section>
+<!-- Shared live status reports progress and errors accessibly. -->
+<p id="status" role="status"></p>
+</main>
+</body>
+</html>

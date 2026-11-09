@@ -1,0 +1,12 @@
+- Record and update the AI-USAGE.md and prompts.txt files after every excecution, AI-USAGE file records the AI used in our project and prompts.txt will be recoding the prompts given to AI assistant.  
+- Can we use RAG in our project if we're using PostgreSQL instead of a vector DB? Would SQL-based retrieval be a better fit than embeddings for transaction data?
+- Is it good approach to get calculations using Python and then using LLM for generating the appropriate answer or we use the LLM for calculations and answers both?
+- Help me to design a PostgreSQL schema that links each upload batch to its documents and analysis.
+- Can you review how I save uploaded documents and make sure a batch is stored atomically, so partial uploads don’t leave inconsistent data?
+- Can you help me to parse transactions safely with Decimal.
+- Help me to wire the upload, preview, analysis, and chat endpoints together with clear validation and useful error responses.
+- Help me to keep financial calculations local and use Groq only to select or explain evidence that already exists.
+- write the system prompts for LLM, ANALYSIS_SYSTEM and QUERY_SYSTEM prompts.
+- Help me to connect the upload and follow-up question flows, then add tests for redaction, totals, and unsupported AI answers?
+- use doc string in every function to explain the working of that function for understanding.
+- Improve the frontend part (index.html, style.css, app.jss) keeping the same functionality. 

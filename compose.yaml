@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    # Demo credentials are for local development only; bind the database to loopback.
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-scrubber}
+      POSTGRES_USER: ${POSTGRES_USER:-scrubber}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-admin}
+    ports:
+      - "127.0.0.1:5432:5432"
+    # Keep the database files across container restarts.
+    volumes:
+      - statements:/var/lib/postgresql/data
+volumes:
+  # Remove with `docker compose down -v` only when intentionally deleting local data.
+  statements:

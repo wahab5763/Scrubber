@@ -9,4 +9,4 @@
 - write the system prompts for LLM, ANALYSIS_SYSTEM and QUERY_SYSTEM prompts.
 - Help me to connect the upload and follow-up question flows, then add tests for redaction, totals, and unsupported AI answers?
 - use doc string in every function to explain the working of that function for understanding.
-- Improve the frontend part (index.html, style.css, app.jss) keeping the same functionality. 
+- Improve the frontend part (index.html, style.css, app.js) keeping the same functionality. 
